@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.example.column.Column
+        android:id="@+id/columns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <com.example.column.Coordinate
+        android:id="@+id/coordinator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="42dp" />
+
+    <ImageView
+        android:id="@+id/iconColor1"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/teal_700"
+        app:layout_constraintBottom_toTopOf="@id/iconColor2"
+        app:layout_constraintEnd_toStartOf="@id/sb1"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <SeekBar
+        android:id="@+id/sb1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="5dp"
+        android:max="100"
+        app:layout_constraintBottom_toTopOf="@id/sb2"
+        app:layout_constraintTop_toTopOf="@+id/iconColor1" />
+
+    <ImageView
+        android:id="@+id/iconColor2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/teal_700"
+        app:layout_constraintBottom_toTopOf="@id/iconColor3"
+        app:layout_constraintEnd_toStartOf="@id/sb2"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/iconColor3"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/teal_700"
+        app:layout_constraintBottom_toTopOf="@id/iconColor4"
+        app:layout_constraintEnd_toStartOf="@id/sb3"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <SeekBar
+        android:id="@+id/sb2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="10dp"
+        android:max="100"
+        app:layout_constraintBottom_toTopOf="@id/sb3"
+        app:layout_constraintTop_toTopOf="@+id/iconColor2"/>
+
+    <SeekBar
+        android:id="@+id/sb3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="10dp"
+        android:max="100"
+        app:layout_constraintBottom_toTopOf="@id/sb4"
+       app:layout_constraintTop_toTopOf="@+id/iconColor3"/>
+
+
+    <ImageView
+        android:id="@+id/iconColor4"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="30dp"
+        android:background="@color/teal_700"
+        app:layout_constraintBottom_toBottomOf="@id/iconColor5"
+        app:layout_constraintEnd_toStartOf="@id/sb4"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <SeekBar
+        android:id="@+id/sb4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="30dp"
+        android:max="100"
+        app:layout_constraintBottom_toBottomOf="@id/sb5"
+        app:layout_constraintTop_toTopOf="@id/iconColor4" />
+
+    <SeekBar
+        android:id="@+id/sb5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="15dp"
+        android:max="100"
+        app:layout_constraintStart_toStartOf="@id/iconColor5"
+        app:layout_constraintTop_toTopOf="@+id/iconColor5"/>
+
+    <ImageView
+        android:id="@+id/iconColor5"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/teal_700"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/sb5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
